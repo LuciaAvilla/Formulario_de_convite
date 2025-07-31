@@ -38,48 +38,43 @@
     border-radius: 0.8rem;
     font: var(--text-body-md-regular);
     color: var(--input-placeholder);
-
+    height: 4.8rem;
 
     padding: 1.3rem 1.3rem 1.6rem;
-
 }
 
-#title {
-    width: 56rem;
+/* Remove o botão do calendário */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
-
-#address {
-    width: 27.2rem;
-}
 
 .label-forms {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    width: 56rem;
 }
 
-.row {
+.collum {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
+    gap: 1.6rem;
+    width: 56rem;
 
-/*.row .label-forms {
-    flex: 1;
-    min-width: 25rem;
-}*/
-
-.row .label-forms input {
-    width: 100%;
+    & .label-forms {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .titles-labels {
     font: var(--text-body-sm-regular);
     color: var(--text-body);
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
+    padding-bottom: 0.5rem;
 }
 
 .toggleCheckbox {
@@ -90,10 +85,10 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 27.2rem;
-    height: 4.8rem;
+
     cursor: pointer;
-    padding: 0;
+
+
 }
 
 .toggleContainer::before {
@@ -108,6 +103,11 @@
     border-radius: 0.4rem;
     background: var(--input-stroke);
     transition: all 0.3s;
+}
+
+#description {
+    height: 14rem;
+
 
 }
 
@@ -129,28 +129,41 @@
 }
 
 .toggleCheckbox:checked+.toggleContainer div:first-child {
-    /*color: var(--text-body);*/
-    color: aqua;
+    color: var(--text-body);
     transition: color 0.3s;
+    font: var(--text-body-sm-regular);
+
+    & svg {
+        color: var(--input-placeholder);
+    }
 }
 
 .toggleCheckbox:checked+.toggleContainer div:last-child {
     color: var(--text-heading);
     transition: color 0.3s;
+    font: var(--text-body-sm-semibold);
+
+    & svg {
+        color: var(--brand-light);
+    }
 }
 
 .toggleCheckbox+.toggleContainer div:first-child {
     color: var(--text-heading);
     transition: color 0.3s;
+    font: var(--text-body-sm-semibold);
 
-    &.icon svg path {
-        fill: var(--brand-light);
-        cursor: pointer
+    & svg {
+        color: var(--brand-light);
     }
 }
 
 .toggleCheckbox+.toggleContainer div:last-child {
-    /*color: var(--text-body);*/
-    color: red;
+    color: var(--text-body);
     transition: color 0.3s;
+    font: var(--text-body-sm-regular);
+
+    & svg {
+        color: var(--input-placeholder);
+    }
 }
