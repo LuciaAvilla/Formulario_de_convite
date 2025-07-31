@@ -87,3 +87,20 @@ body {
 
 
 }
+
+.about-event {
+    align-items: center;
+    display: flex;
+    color: var(--text-heading);
+    font: var(--text-heading-sm);
+    gap: 1.2rem;
+    width: 15.8rem;
+    height: 2.4rem;
+    padding-bottom: 2.4rem;
+
+    & img {
+        height: 2.4rem;
+        width: 2.4rem;
+        aspect-ratio: 1/1;
+    }
+}

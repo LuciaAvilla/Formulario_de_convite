@@ -1,0 +1,99 @@
+.selection-wrapped {
+    max-width: 56rem;
+    padding-top: 5rem;
+}
+
+.about-event {
+    & h2 {
+        font: var(--text-heading-sm);
+        color: var(--text-heading);
+    }
+}
+
+.color-choice {
+    font: var(--text-body-sm-regular);
+    color: #FFFFFF;
+    padding-bottom: 1.6rem;
+}
+
+.colors-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+
+}
+
+.color-box {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.6rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+}
+
+.marker {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0.6rem solid var(--shape-button);
+    box-sizing: border-box;
+
+
+}
+
+.color-box input {
+    display: none;
+
+}
+
+.color-box input:checked+.marker {
+    outline: 0.2rem solid var(--brand-light);
+}
+
+.brand-light {
+
+    color: var(--brand-light);
+}
+
+.navy {
+    background-color: var(--navy);
+}
+
+.purple {
+    background-color: var(--purple);
+}
+
+.fuschia {
+    background-color: var(--fuschia);
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+.danger {
+    background-color: var(--danger);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.lime {
+    background-color: var(--lime);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.cyan {
+    background-color: var(--cyan);
+}
