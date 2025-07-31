@@ -1,0 +1,156 @@
+.input-wrapped {
+    align-items: flex-start;
+    max-width: 56rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    padding: 8.0rem 13.0rem;
+
+    & h1 {
+        color: var(--text-heading);
+        font: var(--text-heading-md);
+        padding-bottom: 4.0rem;
+    }
+
+    & .about-event {
+        align-items: center;
+        display: flex;
+        color: var(--text-heading);
+        font: var(--text-heading-sm);
+        gap: 1.2rem;
+        width: 15.8rem;
+        height: 2.4rem;
+        padding-bottom: 2.4rem;
+
+        & img {
+            height: 2.4rem;
+            width: 2.4rem;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+.input-forms,
+.toggleContainer {
+    background-color: var(--input-base);
+    border: 0.2rem solid var(--input-stroke);
+    border-radius: 0.8rem;
+    font: var(--text-body-md-regular);
+    color: var(--input-placeholder);
+
+
+    padding: 1.3rem 1.3rem 1.6rem;
+
+}
+
+#title {
+    width: 56rem;
+}
+
+
+#address {
+    width: 27.2rem;
+}
+
+.label-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/*.row .label-forms {
+    flex: 1;
+    min-width: 25rem;
+}*/
+
+.row .label-forms input {
+    width: 100%;
+}
+
+.titles-labels {
+    font: var(--text-body-sm-regular);
+    color: var(--text-body);
+    margin-top: 2.4rem;
+}
+
+.toggleCheckbox {
+    display: none;
+}
+
+.toggleContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 27.2rem;
+    height: 4.8rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggleContainer::before {
+    content: '';
+    position: absolute;
+    width: 13rem;
+    top: 0.4rem;
+    height: 3.6rem;
+    left: 0.4rem;
+
+
+    border-radius: 0.4rem;
+    background: var(--input-stroke);
+    transition: all 0.3s;
+
+}
+
+.toggleContainer .check-wrapper {
+    text-align: center;
+    z-index: 1;
+}
+
+.check-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.toggleCheckbox:checked+.toggleContainer::before {
+    left: 50%;
+}
+
+.toggleCheckbox:checked+.toggleContainer div:first-child {
+    /*color: var(--text-body);*/
+    color: aqua;
+    transition: color 0.3s;
+}
+
+.toggleCheckbox:checked+.toggleContainer div:last-child {
+    color: var(--text-heading);
+    transition: color 0.3s;
+}
+
+.toggleCheckbox+.toggleContainer div:first-child {
+    color: var(--text-heading);
+    transition: color 0.3s;
+
+    &.icon svg path {
+        fill: var(--brand-light);
+        cursor: pointer
+    }
+}
+
+.toggleCheckbox+.toggleContainer div:last-child {
+    /*color: var(--text-body);*/
+    color: red;
+    transition: color 0.3s;
+}
