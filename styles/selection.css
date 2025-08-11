@@ -1,6 +1,8 @@
+/*about colors*/
+
 .selection-wrapped {
     max-width: 56rem;
-    padding-top: 5rem;
+    padding-top: 5rem
 }
 
 .about-event {
@@ -16,21 +18,22 @@
     padding-bottom: 1.6rem;
 }
 
-.colors-container {
+.color-container {
     display: flex;
-    flex-direction: row;
     gap: 1.2rem;
-
 }
 
 .color-box {
-    display: inline-block;
     width: 4rem;
     height: 4rem;
-    margin: 0.6rem;
     cursor: pointer;
     position: relative;
     border-radius: 50%;
+
+    & input {
+        display: none;
+    }
+
 }
 
 .marker {
@@ -41,12 +44,6 @@
     border: 0.6rem solid var(--shape-button);
     box-sizing: border-box;
 
-
-}
-
-.color-box input {
-    display: none;
-
 }
 
 .color-box input:checked+.marker {
@@ -54,8 +51,7 @@
 }
 
 .brand-light {
-
-    color: var(--brand-light);
+    background-color: var(--brand-light);
 }
 
 .navy {
@@ -96,4 +92,68 @@
 
 .cyan {
     background-color: var(--cyan);
+}
+
+/*Theme*/
+
+.theme-choice {
+    font: var(--text-body-sm-regular);
+    color: #FFFFFF;
+    padding-top: 2.8rem;
+    padding-bottom: 1.6rem;
+
+}
+
+.theme {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+
+.theme-box {
+    width: 13.4rem;
+    height: 10.3rem;
+    cursor: pointer;
+    position: relative;
+
+    & input {
+        display: none;
+    }
+}
+
+.marker-theme {
+    display: flex;
+    flex-direction: column;
+
+    width: 13.4rem;
+    height: 10.3rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--input-stroke);
+    background-color: var(--shape-button);
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    padding: 0.4rem;
+
+    & .img-theme {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 0.4rem;
+        padding-bottom: 0.8rem;
+
+    }
+
+    & .title-box {
+        font: var(--text-body-sm-regular);
+        color: var(--text-heading);
+        text-align: center;
+    }
+}
+
+.theme-box:hover .marker-theme {
+    background-color: var(--shape-hover);
+}
+
+.theme-box input:checked+.marker-theme {
+    outline: 0.2rem solid var(--brand-light);
+
 }

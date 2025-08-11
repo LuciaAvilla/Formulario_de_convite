@@ -1,6 +1,5 @@
 .main-container {
     align-items: flex-start;
-
     background-color: var(--shape-body);
     border-radius: 2.5rem;
     display: flex;

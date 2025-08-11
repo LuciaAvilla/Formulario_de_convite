@@ -1,0 +1,159 @@
+.file-container {
+    display: flex;
+    align-items: center;
+    width: 56rem;
+    padding-top: 2.8rem;
+}
+
+.title-components {
+    font: var(--text-body-sm-regular);
+    color: var(--text-body);
+    padding-bottom: 1.2rem;
+}
+
+.toggle-wrapped {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    width: 17.6rem;
+}
+
+/*tentando colocar o claro e o escuro?*/
+.mode-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0.6rem;
+    font: var(--text-body-sm-regular);
+    color: var(--text-heading);
+    position: absolute;
+    right: -5.5rem;
+}
+
+.mode-text::after {
+    content: 'Escuro';
+    width: 4.5rem;
+    text-align: left;
+    transition: ease-in;
+}
+
+/* E mostra o texto "Escuro" via pseudo */
+
+.switch input:checked~.mode-text::after {
+    content: "Claro";
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: flex;
+    width: 7rem;
+    height: 3.2rem;
+    border: 0.1rem solid var(--input-stroke);
+    border-radius: 5.5rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--input-base);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.4rem;
+    width: 2.4rem;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    background-color: var(--input-stroke);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked+.slider {
+    background-color: var(--brand-light);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(2.6rem);
+    -ms-transform: translateX(2.6rem);
+    transform: translateX(3.8rem);
+    background-color: var(--text-heading);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 3.4rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* botão de arquivo*/
+.style-file {
+    padding-left: 6rem;
+
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    height: ;
+}
+
+.file-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    background: var(--shape-button);
+    padding: 1.05rem 1.2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.file-button:hover {
+    background: var(--shape-hover);
+}
+
+.file-button img {
+    width: 1.6rem;
+    height: 1.6rem;
+    aspect-ratio: 1/1;
+}
+
+.file-button span {
+    font: var(--text-body-sm-semibold);
+    color: var(--text-heading);
+    padding-left: 0.8rem;
+}
+
+.upload-description {
+    color: var(--input-placeholder);
+    font: var(--text-body-sm-regular);
+    width: 100%;
+
+}
+
+input[type="file"] {
+    display: none;
+    /* esconde o input*/
+}
