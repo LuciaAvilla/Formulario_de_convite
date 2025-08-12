@@ -8,8 +8,7 @@ Projeto desenvolvido durante o curso da Rocketseat, onde criei um formulário de
 - [Funcionalidades](#funcionalidades)
 - [Como Usar](#como-usar)
 - [Tecnologias](#tecnologias)
-- [Licença](#licença)
-- [Contato](#contato)
+
 
 ## Sobre
 
