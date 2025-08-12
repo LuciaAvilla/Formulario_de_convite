@@ -15,7 +15,17 @@
 }
 
 
-.input-forms,
+.input-forms {
+    background-color: var(--input-base);
+    border: 0.2rem solid var(--input-stroke);
+    border-radius: 0.8rem;
+    font: var(--text-body-md-regular);
+    color: var(--input-placeholder);
+    height: 4.8rem;
+    padding: 1.3rem 1.6rem 1.3rem;
+
+}
+
 .toggleContainer {
     background-color: var(--input-base);
     border: 0.2rem solid var(--input-stroke);
@@ -23,9 +33,10 @@
     font: var(--text-body-md-regular);
     color: var(--input-placeholder);
     height: 4.8rem;
-
-    padding: 1.3rem 1.3rem 1.6rem;
+    padding: 1.3rem 0rem 1.6rem;
 }
+
+
 
 /* Remove o botão do calendário */
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
