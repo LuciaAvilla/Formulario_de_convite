@@ -51,5 +51,3 @@ Preencha o formulário para testar.
 - HTML5
 - CSS3
 
-##Licença
-Projeto sob a licença MIT.
