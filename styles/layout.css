@@ -20,7 +20,7 @@ aside {
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
-
+    position: fixed;
     padding: 3.2rem;
 
     & .img-party {
