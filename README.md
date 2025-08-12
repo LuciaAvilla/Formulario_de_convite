@@ -49,7 +49,7 @@ Preencha o formulário para testar.
 
 ## Tecnologias
 - HTML5
--CSS3
+- CSS3
 
 ##Licença
 Projeto sob a licença MIT.
