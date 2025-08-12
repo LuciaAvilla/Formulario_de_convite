@@ -57,7 +57,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .titles-labels {
     font: var(--text-body-sm-regular);
     color: var(--text-body);
-    margin-top: 1.6rem;
     padding-bottom: 0.5rem;
 }
 
@@ -144,4 +143,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     & svg {
         color: var(--input-placeholder);
     }
+}
+
+.contacts-container {
+    padding-top: 5rem;
 }

@@ -1,0 +1,132 @@
+.line {
+    border: none;
+    border-top: 0.1rem solid var(--input-stroke);
+    margin: 1rem 0;
+    padding-bottom: 4rem;
+}
+
+.terms-container {
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Esconde checkbox padrão */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Caixa quadrada do checkbox */
+.custom-checkbox .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border: 0.1rem solid var(--input-stroke);
+    border-radius: 0.4rem;
+    background-color: var(--input-base);
+    vertical-align: middle;
+    margin-right: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+/* Ícone de check: usando ::after no .checkmark */
+.custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 0.7rem;
+    top: 0.3rem;
+    width: 0.5rem;
+    height: 0.9rem;
+    border: solid var(--brand-light);
+    border-width: 0 0.15rem 0.15rem 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Quando o checkbox estiver marcado */
+.custom-checkbox input:checked+.checkmark {
+    background-color: var(--input-base);
+    border-color: var(--brand-light);
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    opacity: 1;
+}
+
+/* Texto ao lado */
+.custom-checkbox .text-term {
+    vertical-align: middle;
+    color: var(--text-body);
+}
+
+
+/* Texto e links */
+.text-term {
+    font: var(--text-body-sm-regular);
+    color: var(--text-body);
+}
+
+.text-term a {
+    color: var(--brand-light);
+    text-decoration: none;
+}
+
+.text-term a:hover {
+    text-decoration: underline;
+}
+
+/*botão de envio*/
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.button-container {
+    align-items: center;
+    background-color: var(--brand-dark);
+    padding: 1.2rem 2rem 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: background-color 0.2s ease;
+
+
+    & span {
+        font: var(--text-body-md-semibold);
+        color: var(--text-heading);
+    }
+
+    & img {
+        width: 2rem;
+        height: 2rem;
+        aspect-ratio: 1/1;
+    }
+}
+
+.button-container:hover {
+    background-color: var(--brand-mid);
+}
