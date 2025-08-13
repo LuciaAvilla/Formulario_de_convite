@@ -46,15 +46,6 @@ Com uma interface intuitiva e opções de personalização, você pode configura
 
 ---
 
-## 📂 Estrutura do Código
-
-├── assets/
-│ ├── icons/ # Ícones utilizados na interface
-│ ├── imgs/ # Imagens de temas e logotipo
-├── index.html # Estrutura HTML principal
-└── styles.css # Estilização da aplicação
-
-
 ## 🚀 Tecnologias Utilizadas
 
 - **HTML5** para estruturação do conteúdo.  
